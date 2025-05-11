@@ -4,7 +4,7 @@ The goal of this project is to create a comprehensive, organized database contai
 
 Further information about the organizational structure can be derived from the Data Dictionary.  
 
-This project is authored by Clara Smith, an undergraduate data science student at the university of Arkansas. 
+This project is authored by Clara Smith, an undergraduate data science student at the University of Arkansas. 
 
 Please contact cjs044@uark.edu for any additional inquiry.
 
