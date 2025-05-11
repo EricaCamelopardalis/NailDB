@@ -12,7 +12,7 @@ This is a budding, small-scale nail lacquer database project. The goal of this p
 
 This database primarily concerns itself with the organization of **nail lacquer**, as opposed to acrylate-based polishes. 
 
-# Why nail polish?
+# Why nail lacquer?
 To put it briefly:
 - Nail lacquer is not just *like* paint, but *is* paint. Nail lacquer is a combination of pigments, binders, and solvents, in which once the solvent evaporates, a hard colored coating is left behind. 
 - Just as artists are very meticulous about the way that they categorize the paints in their collections, nail lacquerists (those who collect nail polish) are likewise very particular about the colors that they collect, wear, and organize. 
