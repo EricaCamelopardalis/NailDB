@@ -11,7 +11,7 @@ class Tone(models.Model):
 class Undertone(models.Model):
     UndertoneID = models.AutoField(primary_key=True)
     UndertoneName = models.CharField(max_length=12)
-    UndertoneDescription = models.Charfield(80)
+    UndertoneDescription = models.CharField(80)
 
 
 class Opacity(models.Model):
