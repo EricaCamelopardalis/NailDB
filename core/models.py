@@ -36,7 +36,7 @@ class Brand(models.Model):
 
 class Collection(models.Model):
     CollectionID = models.AutoField(primary_key=True)
-    BrandID = models.ForeignKey("core.BrandID", on_delete=models.PROTECT)
+    BrandID = models.ForeignKey("core.Brand", on_delete=models.PROTECT)
     ThemeID = models.ForeignKey("meta.Theme", on_delete=models.PROTECT)
     CollectionName = models.CharField(max_length=35)
     CollectionYear = models.IntegerField()
