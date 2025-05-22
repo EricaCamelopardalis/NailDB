@@ -32,3 +32,17 @@ class Brand(models.Model):
     OperatingCity = models.CharField(max_length=25, null=True)
     OperatingRegion = models.CharField(max_length=25, null=True)
     WebsiteUrl = models.CharField(max_length=2083, null=True)
+
+
+class Collection(models.Model):
+    CollectionID = models.AutoField(primary_key=True)
+    BrandID = models.ForeignKey("core.BrandID", on_delete=models.PROTECT)
+    ThemeID = models.ForeignKey("meta.Theme", on_delete=models.PROTECT)
+    CollectionName = models.CharField(max_length=35)
+    CollectionYear = models.IntegerField()
+    IsInfluencerCollaboratoin = models.BooleanField()
+    InfluencerName = models.CharField(max_length=25, null=True)
+    IsIPCollaboration = models.BooleanField()
+    IPCollaborationName = models.CharField(max_length=25, null=True)
+    IsCharity = models.BooleanField()
+    CharityName = models.CharField(max_length=25, null=True)
