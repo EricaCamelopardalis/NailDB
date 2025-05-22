@@ -34,7 +34,7 @@ class BrandCategory(models.Model):
     BrandCategoryDescription = models.CharField(max_length=80)
 
 
-class Theme(models.model):
+class Theme(models.Model):
     ThemeID = models.AutoField(primary_key=True)
     ThemeName = models.CharField(max_length=35)
     ThemeDescription = models.CharField(max_length=80)
