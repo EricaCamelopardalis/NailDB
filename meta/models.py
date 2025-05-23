@@ -89,3 +89,12 @@ class PolishColorRole(models.Model):
     PolishID = models.ForeignKey("core.Polish", on_delete=models.PROTECT)
     ColorID = models.ForeignKey("meta.Color", on_delete=models.PROTECT)
     RoleID = models.ForeignKey("meta.Role", on_delete=models.PROTECT)
+
+
+class Alias(models.Model):
+    AliasID = models.AutoField(primary_key=True)
+    BrandID = models.ForeignKey("core.Brand", on_delete=models.PROTECT)
+    AliasName = models.CharField(max_length=25)
+    StartDate = models.DateField(null=True, blank=True)
+    EndDate = models.DateField(null=True, blank=True)
+    AliasDescription = models.CharField(max_length=80)
