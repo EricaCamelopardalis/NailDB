@@ -58,3 +58,12 @@ class FinishDetail(models.Model):
     FinishID = models.ForeignKey("meta.Finish", on_delete=models.PROTECT)
     DetailName = models.CharField(max_length=25)
     DetailDescription = models.CharField(max_length=80)
+
+
+class PolishFinish(models.Model):
+    PolishFinishID = models.AutoField(primary_key=True)
+    PolishID = models.ForeignKey("core.Polish", on_delete=models.PROTECT)
+    FinishID = models.ForeignKey("meta.Finish", on_delete=models.PROTECT)
+    FinishDetailID = models.ForeignKey(
+        "meta.FinishDetail", on_delete=models.PROTECT, null=True
+    )
