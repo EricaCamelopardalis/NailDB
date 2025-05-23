@@ -25,7 +25,9 @@ class Line(models.Model):
     BrandID = models.ForeignKey("core.Brand", on_delete=models.PROTECT)
     LineName = models.CharField(max_length=25)
     LineDescription = models.CharField(max_length=80)
-    BottleSize = models.DecimalField(max_digits=4, decimal_places=1)
+    BottleSize = models.DecimalField(
+        max_digits=4, decimal_places=1, null=True, blank=True
+    )
 
 
 class BrandCategory(models.Model):
@@ -44,7 +46,7 @@ class Organizer(models.Model):
     OrganizerID = models.AutoField(primary_key=True)
     OrganizerName = models.CharField(max_length=25)
     OrganizerDescription = models.CharField(max_length=80)
-    FoundingYear = models.IntegerField(null=True)
+    FoundingYear = models.IntegerField(null=True, blank=True)
 
 
 class Finish(models.Model):
@@ -65,5 +67,5 @@ class PolishFinish(models.Model):
     PolishID = models.ForeignKey("core.Polish", on_delete=models.PROTECT)
     FinishID = models.ForeignKey("meta.Finish", on_delete=models.PROTECT)
     FinishDetailID = models.ForeignKey(
-        "meta.FinishDetail", on_delete=models.PROTECT, null=True
+        "meta.FinishDetail", on_delete=models.PROTECT, null=True, blank=True
     )
