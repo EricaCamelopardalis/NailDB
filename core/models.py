@@ -46,3 +46,13 @@ class Collection(models.Model):
     IPCollaborationName = models.CharField(max_length=25, null=True)
     IsCharity = models.BooleanField()
     CharityName = models.CharField(max_length=25, null=True)
+
+
+class Event(models.Model):
+    EventID = models.AutoField(primary_key=True)
+    EventName = models.CharField(max_length=25)
+    EventDescription = models.CharField(max_length=80)
+    StartDate = models.DateField(null=True)
+    EndDate = models.DateField(null=True)
+    OrganizerID = models.ForeignKey("meta.Organizer", on_delete=models.PROTECT)
+    ThemeID = models.ForeignKey("meta.Theme", on_delete=models.PROTECT)

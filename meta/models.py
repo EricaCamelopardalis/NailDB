@@ -38,3 +38,23 @@ class Theme(models.Model):
     ThemeID = models.AutoField(primary_key=True)
     ThemeName = models.CharField(max_length=35)
     ThemeDescription = models.CharField(max_length=80)
+
+
+class Organizer(models.Model):
+    OrganizerID = models.AutoField(primary_key=True)
+    OrganizerName = models.CharField(max_length=25)
+    OrganizerDescription = models.CharField(max_length=80)
+    FoundingYear = models.IntegerField(null=True)
+
+
+class Finish(models.Model):
+    FinishID = models.AutoField(primary_key=True)
+    FinishName = models.CharField(max_length=12)
+    FinishDescription = models.CharField(max_length=80)
+
+
+class FinishDetail(models.Model):
+    FinishDetailID = models.AutoField(primary_key=True)
+    FinishID = models.ForeignKey("meta.Finish", on_delete=models.PROTECT)
+    DetailName = models.CharField(max_length=25)
+    DetailDescription = models.CharField(max_length=80)
