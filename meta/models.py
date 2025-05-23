@@ -69,3 +69,23 @@ class PolishFinish(models.Model):
     FinishDetailID = models.ForeignKey(
         "meta.FinishDetail", on_delete=models.PROTECT, null=True, blank=True
     )
+
+
+class Color(models.Model):
+    ColorID = models.AutoField(primary_key=True)
+    ColorName = models.CharField(max_length=25)
+    ColorDescription = models.CharField(max_length=80)
+    ColorFamily = models.CharField(max_length=12)
+
+
+class Role(models.Model):
+    RoleID = models.AutoField(primary_key=True)
+    RoleName = models.CharField(max_length=25)
+    RoleDescription = models.CharField(max_length=80)
+
+
+class PolishColorRole(models.Model):
+    PolishColorID = models.AutoField(primary_key=True)
+    PolishID = models.ForeignKey("core.Polish", on_delete=models.PROTECT)
+    ColorID = models.ForeignKey("meta.Color", on_delete=models.PROTECT)
+    RoleID = models.ForeignKey("meta.Role", on_delete=models.PROTECT)
